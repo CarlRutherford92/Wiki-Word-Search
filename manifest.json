@@ -1,0 +1,41 @@
+{
+	"manifest_version":2,
+	"name":"name",
+	"version":"0.1",
+	"content_scripts": [
+		{
+			"matches":[
+				"https://en.wikipedia.org/wiki/*"
+			],
+			"css":["style.css"],
+			"js": ["jquery-3.5.1.min.js","popup.js","content3.js","howTo.js"]
+
+		}
+	],
+
+	"background":{
+		"scripts":["background3.js"]
+	},
+
+	"permissions":[
+		"storage",
+		"tabs"
+	],
+	"web_accessible_resources": [
+		"modal.html",
+		"gameBar.html",
+		"logo.svg",
+		"images/logoS.png",
+		"howTo.html",
+		"backArrow.svg"
+	],
+
+
+	"browser_action":{
+		"default_icon":"images/logoS.png", 
+		"default_popup": "popup.html"
+		
+		
+	}
+
+}
